@@ -1,6 +1,21 @@
 import Header from "./Header";
+import {useRef, useState} from "react"
+import { validate } from "../utils/validate";
 
 const Login = () => {
+  const [error, setError] = useState(null);
+
+  const email = useRef(null);
+  const handlelogin = () => {
+    const isValid = validate(email.current.value);
+    console.log(isValid);
+    if(isValid){
+      setError(null);
+    }else{
+      setError("Invalid email");
+    }
+  }
+
   return (
     <div className="relative h-screen w-full">
       {/* Header */}
@@ -25,16 +40,21 @@ const Login = () => {
           <p className="text-gray-300 mb-6">
             Or get started with a new account.
           </p>
+
+          <p className="text-red-500 mb-6">
+           {error}
+          </p>
           
-          <form>
+          <form onSubmit={(e)=>e.preventDefault()}>
           <input
+           ref={email}
             type="text"
             placeholder="Email or mobile number"
             className="w-full px-4 py-3 mb-4 bg-black/40 border border-gray-500 rounded focus:outline-none focus:border-white"
           />
         
 
-          <button className="w-full bg-red-600 hover:bg-red-700 py-3 rounded font-semibold">
+          <button onClick={handlelogin} className="w-full bg-red-600 hover:bg-red-700 py-3 rounded font-semibold">
             Continue
           </button>
           </form>
