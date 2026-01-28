@@ -5,3 +5,11 @@ export const validate = (email) => {
     );
   return isEmailValid;
 };
+
+export const validatePassword = (password) => {
+  const isPasswordValid =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+      password,
+    );
+  return isPasswordValid;
+};
