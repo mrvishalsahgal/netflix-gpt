@@ -61,13 +61,13 @@ const Header = () => {
     });
   }, []);
   return (
-    <div className="absolute top-0 left-0 w-full p-3 border-b border-amber-50/20 flex items-center justify-between z-50">
+    <div className="absolute top-0 left-0 w-full p-3 border-b flex-col md:flex-row border-amber-50/20 flex items-center justify-between z-50">
       {/* LEFT: Logo */}
-      <img className="w-40 ml-20" src={LOGO} alt="Netflix" />
+      <img className="w-40 ml-24 mx-auto" src={LOGO} alt="Netflix" />
 
       {/* RIGHT: Profile + Signout */}
       {user && (
-        <div className="flex items-center gap-4 mr-20">
+        <div className="flex items-center gap-4 mr-20 mx-10">
           {showGptSearch && (
             <select
               onChange={handleLanguageChange}

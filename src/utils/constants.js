@@ -12,6 +12,7 @@ export const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NTNiOTI5MDdjMzM0N2QzZTI2MTY3MTgyNjFjMTgxZSIsIm5iZiI6MTc2OTY2MDk3MC4zOTgwMDAyLCJzdWIiOiI2OTdhZTIyYTA0MjI1ODZmNDlhN2VhZTIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Y-MjWK3F7Klk-6tMQwuiV_CgZkvblqGqQUj4uhNgoF4",
   },
 };
+
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";
 
 export const Supported_Languages = [
@@ -19,3 +20,5 @@ export const Supported_Languages = [
   { identifier: "hi", name: "Hindi" },
   { identifier: "es", name: "Spanish" },
 ];
+
+export const GEMINI_API_KEY = "AIzaSyCGQ4iZMFGUgn33yAkiEWamvvJ5L4BgeF0";
